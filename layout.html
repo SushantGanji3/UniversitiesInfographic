@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS Template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* Style the header */
+            header {
+                background-color: #b16604;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+
+            /* Create two columns/boxes that float next to each other */
+            nav {
+                float: left;
+                width: 30%;
+                height: 500px; /* only for demonstration, should be removed */
+                background: #0a023b;
+                padding: 20px;
+            }
+
+            /* Style the list inside the menu */
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            article {
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: #a8a7a7;
+                height: 500px; /* only for demonstration, should be removed */
+            }
+
+            /* Clear floats after the columns */
+            section:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Style the footer */
+            footer {
+                background-color: #3a0425;
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+
+            /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+            @media (max-width: 600px) {
+                nav, article {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>College/University</h2>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                <li><a href="http://www.utexas.edu" target = "_blank">University of Texas</a></li>
+                <li><a href="http://www.stanford.edu" target = "_blank">Stanford University</a></li>
+                <li><a href="https://www.berkeley.edu" target = "_blank">University of California at Berkely</a></li>
+                </ul>
+            </nav>
+        
+        <article>
+            <h1>Choosing a school...</h1>
+            <p>Selecting and applying to a college or university can be a 
+            challenging process.
+            </p>
+            <p>Every school seems to have different requirements and applications, so 
+            starting the process of choosing and applying should be started as early as
+            possible.
+            </p>
+            <video width = "300" height = "140" controls>
+                <source src = "basketbalview.mp4" type = "video/mp4">
+            </video>
+            <video width = "300" height = "140" controls>
+                <source src = "footballview.mp4" type = "video/mp4">
+            </video>
+            <iframe width="300" height="140" src="https://www.youtube.com/embed/gFOZAO3WoQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </article>
+        </section>
+
+        <footer>
+        <p>Footer</p>
+        </footer>
+    </body>
+</html>
